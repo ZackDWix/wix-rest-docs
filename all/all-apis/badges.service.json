@@ -894,6 +894,79 @@
   "callbacks": [],
   "messages":   [
         {
+      "name": "_com_wixpress_badges_v3_BadgeAssignedDomainEvent",
+      "displayName": "Badge Assigned Domain Event Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "id",
+          "type": "string",
+          "doc": "Unique event ID."
+        },
+                {
+          "name": "entityFqdn",
+          "type": "string",
+          "doc": "Expected `wix.badges.v3.badge`.\nFully Qualified Domain Name."
+        },
+                {
+          "name": "slug",
+          "type": "string",
+          "doc": "Expected `badge_assigned`.\nEvent name."
+        },
+                {
+          "name": "actionEvent",
+          "type": "All APIs.Badges._com_wixpress_badges_v3_BadgeAssignedActionEvent",
+          "doc": "Event Info"
+        },
+                {
+          "name": "entityId",
+          "type": "string",
+          "doc": "BadgeAssigned ID associated with this event."
+        },
+                {
+          "name": "eventTime",
+          "type": "string",
+          "doc": "Event timestamp."
+        },
+                {
+          "name": "triggeredByAnonymizeRequest",
+          "type": "boolean",
+          "doc": "Whether this event was triggered as a result of a privacy regulation application (e.g., GDPR)."
+        },
+                {
+          "name": "originatedFrom",
+          "type": "string",
+          "doc": "If present, indicates the action that triggered the event."
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_badges_v3_BadgeAssignedActionEvent",
+      "displayName": "Badge Assigned Action Event Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "body",
+        "type": "All APIs.Badges._com_wixpress_badges_v3_BadgeAssigned",
+        "doc": "Event body"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
       "name": "_com_wixpress_badges_v3_BadgeUpdatedDomainEvent",
       "displayName": "Badge Updated Domain Event Object",
       "locations": [],
@@ -937,6 +1010,11 @@
           "name": "triggeredByAnonymizeRequest",
           "type": "boolean",
           "doc": "Whether this event was triggered as a result of a privacy regulation application (e.g., GDPR)."
+        },
+                {
+          "name": "originatedFrom",
+          "type": "string",
+          "doc": "If present, indicates the action that triggered the event."
         }
       ],
       "enum": null,
@@ -1005,6 +1083,11 @@
           "name": "triggeredByAnonymizeRequest",
           "type": "boolean",
           "doc": "Whether this event was triggered as a result of a privacy regulation application (e.g., GDPR)."
+        },
+                {
+          "name": "originatedFrom",
+          "type": "string",
+          "doc": "If present, indicates the action that triggered the event."
         }
       ],
       "enum": null,
@@ -1069,6 +1152,11 @@
           "name": "triggeredByAnonymizeRequest",
           "type": "boolean",
           "doc": "Whether this event was triggered as a result of a privacy regulation application (e.g., GDPR)."
+        },
+                {
+          "name": "originatedFrom",
+          "type": "string",
+          "doc": "If present, indicates the action that triggered the event."
         }
       ],
       "enum": null,
@@ -1087,74 +1175,6 @@
       "members": [      {
         "name": "entity",
         "type": "All APIs.Badges._com_wixpress_badges_v3_Badge",
-        "doc": "Event body"
-      }],
-      "enum": null,
-      "extra": {},
-      "labels": []
-    },
-        {
-      "name": "_com_wixpress_badges_v3_BadgeAssignedDomainEvent",
-      "displayName": "Badge Assigned Domain Event Object",
-      "locations": [],
-      "docs":       {
-        "summary": "",
-        "links": [],
-        "examples": []
-      },
-      "members":       [
-                {
-          "name": "id",
-          "type": "string",
-          "doc": "Unique event ID."
-        },
-                {
-          "name": "entityFqdn",
-          "type": "string",
-          "doc": "Expected `wix.badges.v3.badge`.\nFully Qualified Domain Name."
-        },
-                {
-          "name": "slug",
-          "type": "string",
-          "doc": "Expected `badge_assigned`.\nEvent name."
-        },
-                {
-          "name": "actionEvent",
-          "type": "All APIs.Badges._com_wixpress_badges_v3_BadgeAssignedActionEvent",
-          "doc": "Event Info"
-        },
-                {
-          "name": "entityId",
-          "type": "string",
-          "doc": "BadgeAssigned ID associated with this event."
-        },
-                {
-          "name": "eventTime",
-          "type": "string",
-          "doc": "Event timestamp."
-        },
-                {
-          "name": "triggeredByAnonymizeRequest",
-          "type": "boolean",
-          "doc": "Whether this event was triggered as a result of a privacy regulation application (e.g., GDPR)."
-        }
-      ],
-      "enum": null,
-      "extra": {},
-      "labels": []
-    },
-        {
-      "name": "_com_wixpress_badges_v3_BadgeAssignedActionEvent",
-      "displayName": "Badge Assigned Action Event Object",
-      "locations": [],
-      "docs":       {
-        "summary": "",
-        "links": [],
-        "examples": []
-      },
-      "members": [      {
-        "name": "body",
-        "type": "All APIs.Badges._com_wixpress_badges_v3_BadgeAssigned",
         "doc": "Event body"
       }],
       "enum": null,
@@ -1205,6 +1225,11 @@
           "name": "triggeredByAnonymizeRequest",
           "type": "boolean",
           "doc": "Whether this event was triggered as a result of a privacy regulation application (e.g., GDPR)."
+        },
+                {
+          "name": "originatedFrom",
+          "type": "string",
+          "doc": "If present, indicates the action that triggered the event."
         }
       ],
       "enum": null,
@@ -1247,7 +1272,7 @@
                 {
           "name": "order",
           "type": "All APIs.Badges._wix_common_SortOrder",
-          "doc": " Sort order.\n\n Defaults to `ASC`.\n"
+          "doc": " Sort order.\n"
         }
       ],
       "enum": null,
@@ -1875,6 +1900,55 @@
           "typeParams": ["string"]
         },
         "doc": " List of member IDs assigned to the badge.\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_badges_v3_AssignBadgesRequest",
+      "displayName": "Assign Badges Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "ids",
+          "type":           {
+            "name": "array",
+            "typeParams": ["string"]
+          },
+          "doc": " List of badge IDs to assign to the member.\n"
+        },
+                {
+          "name": "memberId",
+          "type": "string",
+          "doc": " Member ID.\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_badges_v3_AssignBadgesResponse",
+      "displayName": "Assign Badges Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "ids",
+        "type":         {
+          "name": "array",
+          "typeParams": ["string"]
+        },
+        "doc": " List of badge IDs newly assigned to the member.\n"
       }],
       "enum": null,
       "extra": {},
