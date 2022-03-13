@@ -1,5 +1,19 @@
 # Release Notes
 
+## New Release: [Inbox API](inbox/)
+
+The new Inbox API introduces functionality
+for managing [conversations](inbox/conversations) and [messages](inbox/messages)
+between the site and its visitors, contacts, and members.
+
+This deprecates the [Wix Chat API](wix-chat/wix-chat).
+(March 1, 2022)
+
+## New Release: [Account Level APIs](account-level-apis/)
+
+The Account Level APIs are accessible only using API keys, which are currently available to selected beta users only.
+APIs exposed include Sites, Site Folders and Resellers. (February 24, 2022)  
+
 ## New Release: [Editor Deep Link API](app-management/about-the-editor-deep-link-api)
 
 The [Editor Deep Link API](app-management/about-the-editor-deep-link-api) generates a URL for an app that navigates to a user's Editor and places the app's components on a page. (January 30, 2022)
