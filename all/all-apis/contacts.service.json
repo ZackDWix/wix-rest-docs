@@ -2956,6 +2956,31 @@
       "labels": []
     },
         {
+      "name": "_wix_common_Sorting",
+      "displayName": "Sorting Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "fieldName",
+          "type": "string",
+          "doc": " Name of the field to sort by.\n"
+        },
+                {
+          "name": "order",
+          "type": "All APIs.Contacts._wix_common_SortOrder",
+          "doc": " Sort order.\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
       "name": "_com_wixpress_contacts_core_api_v4_upstream_wix_common_Sorting",
       "displayName": "Sorting Object",
       "locations": [],
@@ -3607,31 +3632,6 @@
         "type": "string",
         "doc": " ID of deleted Contact\n"
       }],
-      "enum": null,
-      "extra": {},
-      "labels": []
-    },
-        {
-      "name": "_wix_common_Sorting",
-      "displayName": "Sorting Object",
-      "locations": [],
-      "docs":       {
-        "summary": "",
-        "links": [],
-        "examples": []
-      },
-      "members":       [
-                {
-          "name": "fieldName",
-          "type": "string",
-          "doc": " Name of the field to sort by.\n"
-        },
-                {
-          "name": "order",
-          "type": "All APIs.Contacts._wix_common_SortOrder",
-          "doc": " Sort order.\n"
-        }
-      ],
       "enum": null,
       "extra": {},
       "labels": []
@@ -5582,6 +5582,23 @@
       "labels": []
     },
         {
+      "name": "_wix_common_SortOrder",
+      "displayName": "Sort Order Object",
+      "locations": [],
+      "docs":       {
+        "summary": " \n Possible values are: <li><code> ASC <\/code><\/li><li><code> DESC <\/code><\/li>",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum":       [
+        "ASC",
+        "DESC"
+      ],
+      "extra": {},
+      "labels": []
+    },
+        {
       "name": "_com_wixpress_contacts_core_api_v4_upstream_wix_common_SortOrder",
       "displayName": "Sort Order Object",
       "locations": [],
@@ -5787,23 +5804,6 @@
         "APP",
         "SITE_MEMBERS",
         "MANUAL"
-      ],
-      "extra": {},
-      "labels": []
-    },
-        {
-      "name": "_wix_common_SortOrder",
-      "displayName": "Sort Order Object",
-      "locations": [],
-      "docs":       {
-        "summary": " \n Possible values are: <li><code> ASC <\/code><\/li><li><code> DESC <\/code><\/li>",
-        "links": [],
-        "examples": []
-      },
-      "members": [],
-      "enum":       [
-        "ASC",
-        "DESC"
       ],
       "extra": {},
       "labels": []
