@@ -71,7 +71,7 @@
     },
     "locations": [],
     "docs":     {
-      "summary": "\nSends a site member an email with a link to set their password.\n\n<!--ONLY:VELO\nThe `sendSetPasswordEmail()` function returns a Promise that resolves\nwhen the set password link is emailed to the member.\n<!--END:ONLY:VELO-->\n\nThe set password link is valid for 3 hours,\nand it can be used only once.\nIf the link expires, the original password remains.\n \n",
+      "summary": "\nSends a site member an email with a link to set their password.\n\nThe set password link is valid for 3 hours,\nand it can be used only once.\nIf the link expires, the original password remains.\n \n",
       "description": [],
       "request": "POST",
       "url": "https://www.wixapis.com/members/v1/auth/members/send-set-password-email",
@@ -276,7 +276,8 @@
                 {
           "name": "filename",
           "type": "string",
-          "doc": " Image filename. Optional.\n"
+          "doc": " Image filename. Optional.\n",
+          "readOnly": true
         }
       ],
       "enum": null,
@@ -581,7 +582,7 @@
                 {
           "name": "profilePrivacyStatus",
           "type": "All APIs.Member Authentication._wix_members_api_v1_SiteMemberPrivacyStatus",
-          "doc": "\nSets the privacy status of a new member upon registration.\n\n<!--ONLY:REST-->\n- `PUBLIC`: Member is visible to everyone.\n- `PRIVATE`: Member is hidden from site visitors and other site members. Member is returned only to site contributors and apps with the appropriate permissions.\n- `UNKNOWN`: Insufficient permissions to get the status.\n<!--END:ONLY:REST-->\n\n<!--ONLY:VELO\nOne of:\n\n- `\"PUBLIC\"`: Member is visible to everyone.\n- `\"PRIVATE\"`: Member is hidden from site visitors and other site members. Member is returned only to site contributors and apps with the appropriate permissions.\n- `\"UNKNOWN\"`: Insufficient permissions to get the status.\n<!--END:ONLY:VELO-->\n"
+          "doc": "\nSets the privacy status of a new member upon registration.\n\n- `PUBLIC`: Member is visible to everyone.\n- `PRIVATE`: Member is hidden from site visitors and other site members. Member is returned only to site contributors and apps with the appropriate permissions.\n- `UNKNOWN`: Insufficient permissions to get the status.\n"
         },
                 {
           "name": "isOfflineRegistration",
@@ -838,11 +839,23 @@
         "links": [],
         "examples": []
       },
-      "members": [      {
-        "name": "appleLogin",
-        "type": "All APIs.Member Authentication._wix_members_api_v1_AppleLogin",
-        "doc": ""
-      }],
+      "members":       [
+                {
+          "name": "appleLogin",
+          "type": "All APIs.Member Authentication._wix_members_api_v1_AppleLogin",
+          "doc": ""
+        },
+                {
+          "name": "googleLogin",
+          "type": "All APIs.Member Authentication._wix_members_api_v1_GoogleLogin",
+          "doc": ""
+        },
+                {
+          "name": "facebookLogin",
+          "type": "All APIs.Member Authentication._wix_members_api_v1_FacebookLogin",
+          "doc": ""
+        }
+      ],
       "enum": null,
       "extra": {},
       "labels": [],
@@ -861,6 +874,42 @@
         "name": "token",
         "type": "string",
         "doc": " JWT signed by apple, contains target (aud), email etc\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_members_api_v1_GoogleLogin",
+      "displayName": "Google Login Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "token",
+        "type": "string",
+        "doc": " JWT signed by Google, contains target (aud), email etc\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_members_api_v1_FacebookLogin",
+      "displayName": "Facebook Login Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "token",
+        "type": "string",
+        "doc": " AccessToken created by Facebook, used to later fetch details over API\n"
       }],
       "enum": null,
       "extra": {},
