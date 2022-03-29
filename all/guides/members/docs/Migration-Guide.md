@@ -152,8 +152,8 @@ Which fields will be returned using which fieldset property
 |Public|Extended|Full|
 |---|---|---|
 |id|id|id|
-| | |login_email|
-| | |status|
+| |login_email|login_email|
+| |status|status|
 |contact_id|contact_id|contact_id|
 | | |contact.first_name|
 | | |contact.last_name|
