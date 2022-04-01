@@ -1098,7 +1098,7 @@
                 {
           "name": "locationType",
           "type": "All APIs.Bookings - Resources Service._com_wix_bookings_common_api_v1_Location_LocationType",
-          "doc": "Location type.\n<!--ONLY:VELO\n One of:\n - `\"OWNER_BUSINESS\"` The business address as set in the site’s general settings.\n - `\"OWNER_CUSTOM\"` The address as set when creating the service.\n - `\"CUSTOM\"` The address set for the individual session.\n<!--END:ONLY:VELO-->\n"
+          "doc": "Location type.\n One of:\n - `\"OWNER_BUSINESS\"` The business address as set in the site’s general settings.\n - `\"OWNER_CUSTOM\"` The address as set when creating the service.\n - `\"CUSTOM\"` The address set for the individual session.\n"
         },
                 {
           "name": "address",
