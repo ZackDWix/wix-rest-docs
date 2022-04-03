@@ -585,7 +585,7 @@
                 {
           "name": "file",
           "type": "All APIs.Messages._com_wixpress_inbox_v2_FileMessage",
-          "doc": " File attachment.\n Can contain a file from Wix Media or an external provider.\n TODO do we allow it for SMS\n"
+          "doc": " File attachment.\n Can contain a file from Wix Media or an external provider.\n"
         }
       ],
       "enum": null,
@@ -598,7 +598,7 @@
       "displayName": "Image Message Object",
       "locations": [],
       "docs":       {
-        "summary": "\n",
+        "summary": "\nTODO make mandatory when media endpoint is ready\n",
         "links": [],
         "examples": []
       },
@@ -606,7 +606,7 @@
                 {
           "name": "id",
           "type": "string",
-          "doc": " Wix Media ID.\nTODO make mandatory when media endpoint is ready\n"
+          "doc": " Wix Media ID.\n"
         },
                 {
           "name": "url",
@@ -638,7 +638,7 @@
       "displayName": "File Message Object",
       "locations": [],
       "docs":       {
-        "summary": "",
+        "summary": "TODO make mandatory when media endpoint is ready\n",
         "links": [],
         "examples": []
       },
@@ -646,7 +646,7 @@
                 {
           "name": "id",
           "type": "string",
-          "doc": " Wix Media ID.\nTODO make mandatory when media endpoint is ready\n"
+          "doc": " Wix Media ID.\n"
         },
                 {
           "name": "url",
@@ -939,6 +939,20 @@
           "doc": " ID you define for the interaction, to be handled by your server.\n"
         }
       ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_inbox_v2_UnsupportedPayload",
+      "displayName": "Unsupported Payload Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
       "enum": null,
       "extra": {},
       "labels": []
@@ -1751,6 +1765,28 @@
         "UNKNOWN_VISIBILITY",
         "BUSINESS_AND_PARTICIPANT",
         "BUSINESS"
+      ],
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_inbox_v2_ContentType",
+      "displayName": "Content Type Object",
+      "locations": [],
+      "docs":       {
+        "summary": " \n Possible values are: <li><code> UNKNOWN_CONTENT <\/code><\/li><li><code> BASIC <\/code><\/li><li><code> TEMPLATE <\/code><\/li><li><code> MINIMAL <\/code><\/li><li><code> FORM <\/code><\/li><li><code> SYSTEM <\/code><\/li><li><code> UNSUPPORTED <\/code><\/li>",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum":       [
+        "UNKNOWN_CONTENT",
+        "BASIC",
+        "TEMPLATE",
+        "MINIMAL",
+        "FORM",
+        "SYSTEM",
+        "UNSUPPORTED"
       ],
       "extra": {},
       "labels": []
