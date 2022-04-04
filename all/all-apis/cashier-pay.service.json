@@ -1180,7 +1180,8 @@
       "members": [      {
         "name": "referenceOrderId",
         "type": "string",
-        "doc": " a reference to the initial order\n"
+        "doc": " deprecated, please use payment agreements instead\n",
+        "deprecated": true
       }],
       "enum": null,
       "extra": {},
@@ -1198,7 +1199,8 @@
       "members": [      {
         "name": "referenceOrderId",
         "type": "string",
-        "doc": " a reference to the initial order\n"
+        "doc": " deprecated, please use payment agreements instead\n",
+        "deprecated": true
       }],
       "enum": null,
       "extra": {},
@@ -1216,7 +1218,8 @@
       "members": [      {
         "name": "referenceOrderId",
         "type": "string",
-        "doc": " a reference to the initial order\n"
+        "doc": " deprecated, please use payment agreements instead\n",
+        "deprecated": true
       }],
       "enum": null,
       "extra": {},
@@ -1727,6 +1730,42 @@
       "labels": []
     },
         {
+      "name": "_wix_payment_api_pay_v2_FindAgreementIdByOrderIdRequest",
+      "displayName": "Find Agreement Id By Order Id Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "orderId",
+        "type": "string",
+        "doc": ""
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_payment_api_pay_v2_FindAgreementIdByOrderIdResponse",
+      "displayName": "Find Agreement Id By Order Id Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "paymentAgreementId",
+        "type": "string",
+        "doc": ""
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
       "name": "_wix_payment_api_pay_v2_Payment",
       "displayName": "Payment Object",
       "locations": [],
@@ -1861,6 +1900,11 @@
           "name": "savePaymentMethod",
           "type": "boolean",
           "doc": "Used for saved credit card\n"
+        },
+                {
+          "name": "paymentAgreementId",
+          "type": "string",
+          "doc": ""
         },
                 {
           "name": "paymentMethodDetails",
