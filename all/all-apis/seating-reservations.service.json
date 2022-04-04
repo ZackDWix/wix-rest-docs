@@ -1,0 +1,1093 @@
+{
+  "name": "Seating Reservations",
+  "client_id": "https://github.com/wix-private/events/tree/master/seating-services/seating-reservations#public",
+  "memberOf": "All APIs",
+  "category": "business-service",
+  "mixes": [],
+  "labels": [],
+  "docs":   {
+    "summary": "Lets users reserve seats in the seating plan",
+    "description": []
+  },
+  "properties": [],
+  "tags": [  {
+    "name": "Seating Reservation",
+    "entity": "_com_wixpress_seating_SeatingReservation",
+    "src": "https://github.com/wix-private/events/tree/master/seating-services/seating-reservations/com/wixpress/seating/SeatingReservation.proto"
+  }],
+  "relatedGuides": [  {
+    "path": "../guides/seating-reservations/docs/README.md",
+    "name": "Introduction"
+  }],
+  "operations":   [
+        {
+      "name": "Create Seating Reservation",
+      "methodName": "CreateSeatingReservation",
+      "serviceName": "SeatingReservationService",
+      "tag": "Seating Reservation",
+      "permissions": [],
+      "events": [],
+      "labels": [],
+      "nameParams": [],
+      "params": [      {
+        "in": "BODY",
+        "name": "reservation",
+        "type": "All APIs.Seating Reservations._com_wixpress_seating_SeatingReservation",
+        "doc": " A reservation to create\n",
+        "required": false
+      }],
+      "ret":       {
+        "type":         {
+          "name": "CreateSeatingReservation",
+          "statusCode": "200",
+          "typeParams": ["All APIs.Seating Reservations._com_wixpress_seating_CreateSeatingReservationResponse"]
+        },
+        "doc": ""
+      },
+      "locations": [],
+      "docs":       {
+        "summary": " Creates a seating reservation\n \n",
+        "description": [],
+        "request": "POST",
+        "url": "https://www.wixapis.com/seating-reservations/v1/reservations",
+        "links": [],
+        "examples": [],
+        "extra": {}
+      },
+      "extra":       {
+        "hasRest": true,
+        "rpcRequestName": "CreateSeatingReservationRequest",
+        "rpcResponseName": "CreateSeatingReservationResponse"
+      },
+      "customLabels": [{"id": "maturity-beta"}]
+    },
+        {
+      "name": "Delete Seating Reservation",
+      "methodName": "DeleteSeatingReservation",
+      "serviceName": "SeatingReservationService",
+      "tag": "Seating Reservation",
+      "permissions": [],
+      "events": [],
+      "labels": [],
+      "nameParams": [],
+      "requiredFields": ["id"],
+      "params": [      {
+        "in": "PATH",
+        "name": "id",
+        "type": "string",
+        "doc": " The id of the reservation to delete\n",
+        "required": true
+      }],
+      "ret":       {
+        "type":         {
+          "name": "DeleteSeatingReservation",
+          "statusCode": "200",
+          "typeParams": ["All APIs.Seating Reservations._com_wixpress_seating_DeleteSeatingReservationResponse"]
+        },
+        "doc": ""
+      },
+      "locations": [],
+      "docs":       {
+        "summary": " Deletes the seating reservation\n \n",
+        "description": [],
+        "request": "DELETE",
+        "url": "https://www.wixapis.com/seating-reservations/v1/reservations/{id}",
+        "links": [],
+        "examples": [],
+        "extra": {}
+      },
+      "extra":       {
+        "hasRest": true,
+        "rpcRequestName": "DeleteSeatingReservationRequest",
+        "rpcResponseName": "DeleteSeatingReservationResponse"
+      },
+      "customLabels": [{"id": "maturity-beta"}]
+    },
+        {
+      "name": "Get Reservation",
+      "methodName": "GetReservation",
+      "serviceName": "SeatingReservationService",
+      "tag": "Seating Reservation",
+      "permissions": [],
+      "events": [],
+      "labels": [],
+      "nameParams": [],
+      "requiredFields": ["id"],
+      "params": [      {
+        "in": "PATH",
+        "name": "id",
+        "type": "string",
+        "doc": " The id of the reservation to return\n",
+        "required": true
+      }],
+      "ret":       {
+        "type":         {
+          "name": "GetReservation",
+          "statusCode": "200",
+          "typeParams": ["All APIs.Seating Reservations._com_wixpress_seating_GetReservationResponse"]
+        },
+        "doc": ""
+      },
+      "locations": [],
+      "docs":       {
+        "summary": " Returns available seat counts by category id\n \n",
+        "description": [],
+        "request": "GET",
+        "url": "https://www.wixapis.com/seating-reservations/v1/reservations/{id}",
+        "links": [],
+        "examples": [],
+        "extra": {}
+      },
+      "extra":       {
+        "hasRest": true,
+        "rpcRequestName": "GetReservationRequest",
+        "rpcResponseName": "GetReservationResponse"
+      },
+      "customLabels": [{"id": "maturity-beta"}]
+    },
+        {
+      "name": "Query Seating Reservation",
+      "methodName": "QuerySeatingReservation",
+      "serviceName": "SeatingReservationService",
+      "tag": "Seating Reservation",
+      "permissions": [],
+      "events": [],
+      "labels": [],
+      "nameParams": [],
+      "requiredFields":       [
+        "query",
+        "query.pagingMethod",
+        "query.pagingMethod.paging.limit",
+        "query.pagingMethod.cursorPaging.limit"
+      ],
+      "params": [      {
+        "in": "BODY",
+        "name": "query",
+        "type": "All APIs.Seating Reservations._wix_common_QueryV2",
+        "doc": " A query object\n",
+        "required": true
+      }],
+      "ret":       {
+        "type":         {
+          "name": "QuerySeatingReservation",
+          "statusCode": "200",
+          "typeParams": ["All APIs.Seating Reservations._com_wixpress_seating_QuerySeatingReservationResponse"]
+        },
+        "doc": ""
+      },
+      "locations": [],
+      "docs":       {
+        "summary": " Lists seating reservations by query request\n \n",
+        "description": [],
+        "request": "POST",
+        "url": "https://www.wixapis.com/seating-reservations/v1/reservations/query",
+        "links": [],
+        "examples": [],
+        "extra": {}
+      },
+      "extra":       {
+        "hasRest": true,
+        "rpcRequestName": "QuerySeatingReservationRequest",
+        "rpcResponseName": "QuerySeatingReservationResponse"
+      },
+      "customLabels": [{"id": "maturity-beta"}]
+    }
+  ],
+  "events":   [
+        {
+      "type": "_com_wixpress_seating_SeatingReservationCreatedDomainEvent",
+      "name": "Seating Reservation Created Webhook",
+      "docs":       {
+        "summary": "",
+        "src": "https://github.com/wix-private/events/tree/master/seating-services/seating-reservations/src/main/proto/com/wixpress/seating/SeatingReservationService.proto"
+      },
+      "topic": "domain_events_wix.seating.v1.seating_reservation",
+      "tag": "Seating Reservation",
+      "permissions": [],
+      "customLabels": [{"id": "maturity-beta"}],
+      "eventType": "wix.seating.v1.seating_reservation_created",
+      "extra": {"isDomainEvent": true}
+    },
+        {
+      "type": "_com_wixpress_seating_SeatingReservationDeletedDomainEvent",
+      "name": "Seating Reservation Deleted Webhook",
+      "docs":       {
+        "summary": "",
+        "src": "https://github.com/wix-private/events/tree/master/seating-services/seating-reservations/src/main/proto/com/wixpress/seating/SeatingReservationService.proto"
+      },
+      "topic": "domain_events_wix.seating.v1.seating_reservation",
+      "tag": "Seating Reservation",
+      "permissions": [],
+      "customLabels": [{"id": "maturity-beta"}],
+      "eventType": "wix.seating.v1.seating_reservation_deleted",
+      "extra": {"isDomainEvent": true}
+    }
+  ],
+  "callbacks": [],
+  "messages":   [
+        {
+      "name": "_com_wixpress_seating_SeatingReservationCreatedDomainEvent",
+      "displayName": "Seating Reservation Created Domain Event Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "id",
+          "type": "string",
+          "doc": "Unique event ID."
+        },
+                {
+          "name": "entityFqdn",
+          "type": "string",
+          "doc": "Expected `wix.seating.v1.seating_reservation`.\nFully Qualified Domain Name."
+        },
+                {
+          "name": "slug",
+          "type": "string",
+          "doc": "Expected `created`.\nEvent name."
+        },
+                {
+          "name": "createdEvent",
+          "type": "All APIs.Seating Reservations._com_wixpress_seating_SeatingReservationEntityCreatedEvent",
+          "doc": "Event Info"
+        },
+                {
+          "name": "entityId",
+          "type": "string",
+          "doc": "SeatingReservation ID associated with this event."
+        },
+                {
+          "name": "eventTime",
+          "type": "string",
+          "doc": "Event timestamp."
+        },
+                {
+          "name": "triggeredByAnonymizeRequest",
+          "type": "boolean",
+          "doc": "Whether this event was triggered as a result of a privacy regulation application (e.g., GDPR)."
+        },
+                {
+          "name": "originatedFrom",
+          "type": "string",
+          "doc": "If present, indicates the action that triggered the event."
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_seating_SeatingReservationEntityCreatedEvent",
+      "displayName": "Seating Reservation Entity Created Event Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "entity",
+        "type": "All APIs.Seating Reservations._com_wixpress_seating_SeatingReservation",
+        "doc": "Event body"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_seating_SeatingReservationDeletedDomainEvent",
+      "displayName": "Seating Reservation Deleted Domain Event Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "id",
+          "type": "string",
+          "doc": "Unique event ID."
+        },
+                {
+          "name": "entityFqdn",
+          "type": "string",
+          "doc": "Expected `wix.seating.v1.seating_reservation`.\nFully Qualified Domain Name."
+        },
+                {
+          "name": "slug",
+          "type": "string",
+          "doc": "Expected `deleted`.\nEvent name."
+        },
+                {
+          "name": "deletedEvent",
+          "type": "All APIs.Seating Reservations._com_wixpress_seating_SeatingReservationEntityDeletedEvent",
+          "doc": "Event Info"
+        },
+                {
+          "name": "entityId",
+          "type": "string",
+          "doc": "SeatingReservation ID associated with this event."
+        },
+                {
+          "name": "eventTime",
+          "type": "string",
+          "doc": "Event timestamp."
+        },
+                {
+          "name": "triggeredByAnonymizeRequest",
+          "type": "boolean",
+          "doc": "Whether this event was triggered as a result of a privacy regulation application (e.g., GDPR)."
+        },
+                {
+          "name": "originatedFrom",
+          "type": "string",
+          "doc": "If present, indicates the action that triggered the event."
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_seating_SeatingReservationEntityDeletedEvent",
+      "displayName": "Seating Reservation Entity Deleted Event Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_seating_SeatingReservation",
+      "displayName": "Seating Reservation Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "id",
+          "type": "string",
+          "doc": " The id of the reservation\n",
+          "readOnly": true
+        },
+                {
+          "name": "seatingPlanId",
+          "type": "string",
+          "doc": " The seating plan id\n",
+          "readOnly": true
+        },
+                {
+          "name": "externalSeatingPlanId",
+          "type": "string",
+          "doc": " The external seating plan id\n",
+          "readOnly": true
+        },
+                {
+          "name": "places",
+          "type":           {
+            "name": "array",
+            "typeParams": ["All APIs.Seating Reservations._com_wixpress_seating_PlaceReservation"]
+          },
+          "doc": " Reserved places\n"
+        },
+                {
+          "name": "reservedPlaces",
+          "type":           {
+            "name": "array",
+            "typeParams": ["All APIs.Seating Reservations._com_wixpress_seating_PlaceReservation"]
+          },
+          "doc": " Reserved places\n"
+        },
+                {
+          "name": "externalId",
+          "type": "string",
+          "doc": " A client defined external id for cross referencing.\n Can reference external entities.\n Format: \"{fqdn}:{entity guid}\"\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_seating_PlaceReservation",
+      "displayName": "Place Reservation Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "id",
+          "type": "string",
+          "doc": " The place id.\n"
+        },
+                {
+          "name": "capacity",
+          "type": "integer",
+          "doc": " Number of places in the spot. If not provided - defaults to 1.\n Used to reserve for more that one place in areas.\n"
+        },
+                {
+          "name": "sectorName",
+          "type": "string",
+          "doc": " Optional sector name.\n",
+          "readOnly": true,
+          "deprecated": true
+        },
+                {
+          "name": "areaName",
+          "type": "string",
+          "doc": " Area name.\n",
+          "readOnly": true,
+          "deprecated": true
+        },
+                {
+          "name": "tableName",
+          "type": "string",
+          "doc": " Table name.\n",
+          "readOnly": true,
+          "deprecated": true
+        },
+                {
+          "name": "rowNumber",
+          "type": "string",
+          "doc": " Row number.\n",
+          "readOnly": true,
+          "deprecated": true
+        },
+                {
+          "name": "seatNumber",
+          "type": "string",
+          "doc": " Seat label in a row or table.\n",
+          "readOnly": true,
+          "deprecated": true
+        },
+                {
+          "name": "sectionLabel",
+          "type": "string",
+          "doc": " Optional section name.\n",
+          "readOnly": true
+        },
+                {
+          "name": "areaLabel",
+          "type": "string",
+          "doc": " Area name.\n",
+          "readOnly": true
+        },
+                {
+          "name": "tableLabel",
+          "type": "string",
+          "doc": " Table name.\n",
+          "readOnly": true
+        },
+                {
+          "name": "rowLabel",
+          "type": "string",
+          "doc": " Row number.\n",
+          "readOnly": true
+        },
+                {
+          "name": "seatLabel",
+          "type": "string",
+          "doc": " Seat label in a row or table.\n",
+          "readOnly": true
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_common_Paging",
+      "displayName": "Paging Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "limit",
+          "type": "integer",
+          "doc": " Number of items to load.\n"
+        },
+                {
+          "name": "offset",
+          "type": "integer",
+          "doc": " Number of items to skip in the current sort order.\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_common_CursorPaging",
+      "displayName": "Cursor Paging Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "limit",
+          "type": "integer",
+          "doc": " Number of items to load.\n"
+        },
+                {
+          "name": "cursor",
+          "type": "string",
+          "doc": "\nPointer to the next or previous page in the list of results.\n\nYou can get the relevant cursor token\nfrom the `pagingMetadata` object in the previous call's response.\nNot relevant for the first request.\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_common_PagingMetadataV2",
+      "displayName": "Paging Metadata V 2 Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "count",
+          "type": "integer",
+          "doc": " Number of items returned in the response.\n"
+        },
+                {
+          "name": "offset",
+          "type": "integer",
+          "doc": " Offset that was requested.\n"
+        },
+                {
+          "name": "total",
+          "type": "integer",
+          "doc": " Total number of items that match the query. Returned if offset paging is used and the `tooManyToCount` flag is not set.\n"
+        },
+                {
+          "name": "tooManyToCount",
+          "type": "boolean",
+          "doc": " Flag that indicates the server failed to calculate the `total` field.\n"
+        },
+                {
+          "name": "cursors",
+          "type": "All APIs.Seating Reservations._wix_common_Cursors",
+          "doc": " Cursors to navigate through the result pages using `next` and `prev`. Returned if cursor paging is used.\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_common_Cursors",
+      "displayName": "Cursors Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "next",
+          "type": "string",
+          "doc": " Cursor pointing to next page in the list of results.\n"
+        },
+                {
+          "name": "prev",
+          "type": "string",
+          "doc": " Cursor pointing to previous page in the list of results.\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_common_Sorting",
+      "displayName": "Sorting Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "fieldName",
+          "type": "string",
+          "doc": " Name of the field to sort by.\n"
+        },
+                {
+          "name": "order",
+          "type": "All APIs.Seating Reservations._wix_common_SortOrder",
+          "doc": " Sort order.\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_common_QueryV2",
+      "displayName": "Query V 2 Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "filter",
+          "type": "struct",
+          "doc": "Filter object in the following format:  \n`\"filter\" : {  \n              \"fieldName1\": \"value1\",  \n              \"fieldName2\":{\"$operator\":\"value2\"}  \n  }`  \nExample of operators: `$eq`, `$ne`, `$lt`, `$lte`, `$gt`, `$gte`, `$in`, `$hasSome`, `$hasAll`, `$startsWith`, `$contains`\n"
+        },
+                {
+          "name": "sort",
+          "type":           {
+            "name": "array",
+            "typeParams": ["All APIs.Seating Reservations._wix_common_Sorting"]
+          },
+          "doc": "Sort object in the following format:  \n`[{\"fieldName\":\"sortField1\",\"order\":\"ASC\"},{\"fieldName\":\"sortField2\",\"order\":\"DESC\"}]`\n"
+        },
+                {
+          "name": "fields",
+          "type":           {
+            "name": "array",
+            "typeParams": ["string"]
+          },
+          "doc": "Array of projected fields. A list of specific field names to return. If `fieldsets` are also specified, the union of `fieldsets` and `fields` is returned.\n"
+        },
+                {
+          "name": "fieldsets",
+          "type":           {
+            "name": "array",
+            "typeParams": ["string"]
+          },
+          "doc": "Array of named, predefined sets of projected fields. A array of predefined named sets of fields to be returned. Specifying multiple `fieldsets` will return the union of fields from all sets. If `fields` are also specified, the union of `fieldsets` and `fields` is returned.\n"
+        },
+                {
+          "name": "pagingMethod",
+          "type": "All APIs.Seating Reservations._wix_common_QueryV2_pagingMethod",
+          "doc": ""
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_common_QueryV2_pagingMethod",
+      "displayName": "paging Method Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "paging",
+          "type": "All APIs.Seating Reservations._wix_common_Paging",
+          "doc": "Paging options to limit and skip the number of items.\n"
+        },
+                {
+          "name": "cursorPaging",
+          "type": "All APIs.Seating Reservations._wix_common_CursorPaging",
+          "doc": "Cursor token pointing to a page of results. Not used in the first request. Following requests use the cursor token and not `filter` or `sort`.\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": [],
+      "oneOf": true
+    },
+        {
+      "name": "_com_wixpress_seating_CreateSeatingReservationRequest",
+      "displayName": "Create Seating Reservation Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "reservation",
+        "type": "All APIs.Seating Reservations._com_wixpress_seating_SeatingReservation",
+        "doc": " A reservation to create\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_seating_CreateSeatingReservationResponse",
+      "displayName": "Create Seating Reservation Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "reservation",
+        "type": "All APIs.Seating Reservations._com_wixpress_seating_SeatingReservation",
+        "doc": " Created reservation\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_seating_QuerySeatingReservationRequest",
+      "displayName": "Query Seating Reservation Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "query",
+        "type": "All APIs.Seating Reservations._wix_common_QueryV2",
+        "doc": " A query object\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_seating_QuerySeatingReservationResponse",
+      "displayName": "Query Seating Reservation Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "reservations",
+          "type":           {
+            "name": "array",
+            "typeParams": ["All APIs.Seating Reservations._com_wixpress_seating_SeatingReservation"]
+          },
+          "doc": " Found reservations\n"
+        },
+                {
+          "name": "metadata",
+          "type": "All APIs.Seating Reservations._wix_common_PagingMetadataV2",
+          "doc": " Paging meta data\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_seating_GetReservationRequest",
+      "displayName": "Get Reservation Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "id",
+        "type": "string",
+        "doc": " The id of the reservation to return\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_seating_GetReservationResponse",
+      "displayName": "Get Reservation Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "reservation",
+        "type": "All APIs.Seating Reservations._com_wixpress_seating_SeatingReservation",
+        "doc": " Created reservation\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_seating_GetStockRequest_ById",
+      "displayName": "By Id Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "seatingPlanId",
+        "type":         {
+          "name": "array",
+          "typeParams": ["string"]
+        },
+        "doc": " The id of the plan\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_seating_GetStockRequest_ByExternalId",
+      "displayName": "By External Id Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "externalSeatingPlanId",
+        "type":         {
+          "name": "array",
+          "typeParams": ["string"]
+        },
+        "doc": " The external id of the plan\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_seating_GetStockRequest",
+      "displayName": "Get Stock Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "seatingPlan",
+        "type": "All APIs.Seating Reservations._com_wixpress_seating_GetStockRequest_SeatingPlan",
+        "doc": ""
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_seating_GetStockRequest_SeatingPlan",
+      "displayName": "Seating Plan Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "byId",
+          "type": "All APIs.Seating Reservations._com_wixpress_seating_GetStockRequest_ById",
+          "doc": " Get stock by seating plan id\n"
+        },
+                {
+          "name": "byExternalId",
+          "type": "All APIs.Seating Reservations._com_wixpress_seating_GetStockRequest_ByExternalId",
+          "doc": " Get stock by external seating plan id\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": [],
+      "oneOf": true
+    },
+        {
+      "name": "_com_wixpress_seating_GetStockResponse",
+      "displayName": "Get Stock Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "stock",
+        "type":         {
+          "name": "array",
+          "typeParams": ["All APIs.Seating Reservations._com_wixpress_seating_TicketStock"]
+        },
+        "doc": " Ticket counts by category\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_seating_DeleteSeatingReservationRequest",
+      "displayName": "Delete Seating Reservation Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "id",
+        "type": "string",
+        "doc": " The id of the reservation to delete\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_seating_DeleteSeatingReservationResponse",
+      "displayName": "Delete Seating Reservation Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "reservation",
+        "type": "All APIs.Seating Reservations._com_wixpress_seating_SeatingReservation",
+        "doc": " The deleted reservation\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_seating_TicketStock",
+      "displayName": "Ticket Stock Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "seatingPlanId",
+          "type": "string",
+          "doc": " Seating plan id\n",
+          "readOnly": true
+        },
+                {
+          "name": "externalSeatingPlanId",
+          "type": "string",
+          "doc": " External seating plan id\n",
+          "readOnly": true
+        },
+                {
+          "name": "externalCategoryId",
+          "type": "string",
+          "doc": " External category id\n",
+          "readOnly": true
+        },
+                {
+          "name": "totalCapacity",
+          "type": "integer",
+          "doc": " Total capacity in the category\n",
+          "readOnly": true
+        },
+                {
+          "name": "reserved",
+          "type": "integer",
+          "doc": " Already reserved capacity\n",
+          "readOnly": true
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_seating_GetReservedPlacesRequest",
+      "displayName": "Get Reserved Places Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "id",
+        "type": "string",
+        "doc": " Seating plan id\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_seating_GetReservedPlacesResponse",
+      "displayName": "Get Reserved Places Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "placeReservations",
+        "type":         {
+          "name": "array",
+          "typeParams": ["All APIs.Seating Reservations._com_wixpress_seating_PlaceReservation"]
+        },
+        "doc": " Reserved places of the plan\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_common_SortOrder",
+      "displayName": "Sort Order Object",
+      "locations": [],
+      "docs":       {
+        "summary": " \n Possible values are: <li><code> ASC <\/code><\/li><li><code> DESC <\/code><\/li>",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum":       [
+        "ASC",
+        "DESC"
+      ],
+      "extra": {},
+      "labels": []
+    }
+  ],
+  "extra": {"artifactId": "com.wixpress.seating.seating-reservations"}
+}
