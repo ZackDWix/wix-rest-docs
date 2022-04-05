@@ -10,4 +10,4 @@ The Project Items API allows your app to:
 
 ## Limitations
 
-+ You can assign items only to an existing Projects in [Categories](https://bo.wix.com/wix-docs/rest/drafts/projects).
++ You can assign items only to an existing Projects in [Projects](https://bo.wix.com/wix-docs/rest/drafts/projects).
